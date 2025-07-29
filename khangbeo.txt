@@ -1,0 +1,100 @@
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Hide_Ui = false
+getgenv().WhiteScreen = false
+getgenv().Kaitun = {
+    ["Start Kaitun"] = {
+        ["Enable"] = true,
+        ["Boost Fps"] = true,
+        ["Remove Notify"] = true,
+        ["Delay Auto Sell"] = 5,
+        ["FPS Lock"] = {
+            ["Enable"] = false,
+            ["FPS"] = 20
+        },
+        ["Auto Hop Server"] = {
+            ["Enable"] = true,
+            ["Auto Hop When Get Hight Ping"] = true,
+            ["Delay"] = 600
+        }
+    },
+    ["Webhook"] = {
+        ["Url"] = "",
+        ["Send Delay"] = 300,
+        ["Enable"] = false
+    },
+    ["Sell"] = {
+        ["Mutation to Ignore"] = {"Moonlit"},
+        ["Ignore Target Mutation"] = false
+    },
+    ["Plant"] = {
+        ["Method"] = "1 Pos",
+        ["Auto Buy All Seed On Stock"] = true,
+        ["Auto Water the plant"] = true,
+        ["Delay plant"] = 0.1,
+        ["Auto Plant"] = true,
+        ["Skip Seeds"] = {"Burning Bud", "Sugar Apple", "Bone Blossom"},
+        ["Ignore Use Seed Pack"] = {"Flower Seed Pack"},
+        ["Auto Use Seed Pack"] = true,
+        ["Sprinkler"] = {
+            ["Auto Buy"] = true,
+            ["Gear Buy"] = {"Watering Can","Trowel","Recall Wrench","Basic Sprinkler","Advanced Sprinkler","Godly Sprinkler","Lightning Rod","Master Sprinkler","Favorite Tool"},
+            ["Auto Use Sprinkler/Gear"] = true,
+            ["Keep Sprinkler list"] = {"Master Sprinkler", "Chocolate Sprinkler"}
+        }
+    },
+    ["Auto Remove Plant When Reached Max"] = {
+        ["Enable"] = true,
+        ["Target Plant for remove"] = {"Carrot", "Strawberry", "Blueberry"},
+        ["Number of plants after removal"] = 500
+    },
+    ["Egg-Pet"] = {
+        ["Select Egg to buy"] = {"Bug Egg", "Legendary Egg", "Common Egg"},
+        ["Auto Buy"] = true,
+        ["Auto Plant Egg"] = true,
+        ["Auto Hatch"] = true,
+        ["Auto Feed"] = true,
+        ["Pet Service"] = {
+            ["Target Pet To Release"] = {"Dragonfly", "Red Fox", "Blood Owl", "T-Rex", "Dog"},
+            ["Auto Release Pet"] = true,
+            ["Max Slots To Sell"] = 10,
+            ["Auto Sell Pet In Inventory"] = true
+        },
+        ["Auto Upgrade slot"] = {
+            ["Enable"] = true,
+            ["Upgrade Pet Slot"] = false,
+            ["Upgrade Egg Slot"] = true,
+            ["Ignore pet trade"] = {"Dragonfly", "T-Rex", "Red Fox"}
+        }
+    },
+    ["Event"] = {
+        ["Kitsune"] = {
+            ["Enable"] = true,
+            ["Buy Item"] = false,
+            ["Item to Buy"] = {"Zen Seed Pack", "Zen Egg", "Zen Crate", "Zen Gnome Crate", "Tranquil Pet Mutation", "Mutation sprays"},
+            ["Trade Plant To Requirements"] = true
+        },
+        ["Moonlit"] = {
+            ["Auto Ignore Sell Moonlit Mutation"] = true,
+            ["Auto Get Lunar Point"] = true,
+            ["Twilight Shop"] = {
+                ["Target list"] = {"Night Egg", "Twilight Crate", "Star Caller"},
+                ["Auto Buy"] = true
+            },
+            ["Auto Hop Find Moonlit-Twilight Shop"] = {
+                ["Min money to hop find"] = 15000000,
+                ["Enable"] = true
+            }
+        },
+        ["BloodMoon"] = {
+            ["BloodMoon Shop"] = {
+                ["Target List"] = {"Blood Owl", "Night Seed Pack", "Night Egg", "Star Caller", "Blood Hedgehog", "Mysterious Crate"},
+                ["Auto Buy"] = true
+            },
+            ["Auto Hop To Find Blood Moon"] = {
+                ["Min money to hop find"] = 10000000,
+                ["Enable"] = true
+            }
+        }
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bceda2a67755f72970565c3dd37e7eed.lua"))()
